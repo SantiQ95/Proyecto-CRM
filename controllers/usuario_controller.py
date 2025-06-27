@@ -73,6 +73,24 @@ def mostrar_todos_usuarios():
 
     print(f"\nTotal de usuarios registrados: {len(usuarios)}\n")
 
+# ——— Registrar usuario desde API ———
+# This function allows the registration of a user through an API call, validating the required fields and
+def registrar_usuario_desde_api(nombre, apellidos, email, telefono="", direccion=""):
+    from models.usuario import Usuario
+
+    if not _campos_obligatorios_validos(nombre, apellidos, email):
+        return None, "Faltan campos obligatorios"
+
+    if not _email_valido(email):
+        return None, "El email no tiene un formato válido"
+
+    if usuarios_collection.find_one({"email": email}):
+        return None, "Ya existe un usuario con ese email"
+
+    usuario = Usuario(nombre, apellidos, email, telefono, direccion)
+    usuario.guardar()
+    return usuario, None
+
 
 # ——— Helpers ———
 
@@ -97,3 +115,4 @@ def _mostrar_usuario(usuario):
     print(f"Teléfono: {usuario.get('telefono', 'No especificado')}")
     print(f"Dirección: {usuario.get('direccion', 'No especificado')}")
     print(f"Fecha de registro: {usuario['fecha_registro']}\n")
+
