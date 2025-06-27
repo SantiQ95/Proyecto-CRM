@@ -21,3 +21,4 @@ db = client["EvolveCRM"]
 # Collections used in your CRM
 usuarios_collection = db["usuarios"]
 facturas_collection = db["facturas"]
+log_collection = db["log"]
