@@ -68,7 +68,7 @@ python -m databases.generate_data
 Launch the interactive CRM menu from the root folder:
 
 ```bash
-python main.py
+python -m src.main.py
 ```
 
 ---
