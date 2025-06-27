@@ -1,6 +1,6 @@
 # CRM Console App + FastAPI Microservice (Python + MongoDB)
 
-A lightweight, modular CRM system that combines a rich **command-line interface** with a secure **FastAPI-based user creation API**. Easily manage users and invoices through the terminal—or let authorized external systems create users with API keys and usage limits.
+A lightweight, modular CRM system that combines a clean **command-line interface** with a secure **FastAPI-based user creation API**. Easily manage users and invoices through the terminal—or allow external systems to create users via API keys and usage limits.
 
 ---
 
@@ -8,19 +8,20 @@ A lightweight, modular CRM system that combines a rich **command-line interface*
 
 ### 🧑‍💼 CRM Console App
 
-- Register and validate users
-- Generate and track invoices
-- Search users by name or email
-- Summarize invoices by user or status
-- Simulate real-world data using Faker
-- Test coverage with `pytest`
+- User registration and validation
+- Invoice creation with status tracking
+- User search by name or email
+- Per-user invoice summary reports
+- Financial breakdowns by status
+- In-memory and mock data generation with Faker
+- Test coverage via `pytest`
 
-### 🌐 FastAPI Microservice
+### 🌐 FastAPI Public API
 
 - Public `/usuarios` endpoint for external user creation
-- API key access (with per-key usage limits)
-- Easy key setup via environment variables
-- Daily write limit per key (default: 35 users/day)
+- Simple key-based access control (API keys: `key1`, `key2`, `key3`)
+- Rate limiting per key (35 user creations per day)
+- Secure `.env`-based credential mapping
 
 ---
 
@@ -53,7 +54,7 @@ crm-console/
 - MongoDB (local or Atlas)
 - Dependencies listed in `requirements.txt`
 
-Install them with:
+Install with:
 
 ```bash
 pip install -r requirements.txt
@@ -63,7 +64,7 @@ pip install -r requirements.txt
 
 ## 🧪 Generate Sample Data
 
-Create 20–30 random users, each with up to 5 random invoices:
+Populate your database with sample users and invoices:
 
 ```bash
 python -m databases.generate_data
@@ -73,7 +74,7 @@ python -m databases.generate_data
 
 ## 🖥️ Run the Console App
 
-Launch the interactive CRM terminal:
+Launch the interactive terminal:
 
 ```bash
 python -m src.main.py
@@ -83,34 +84,37 @@ python -m src.main.py
 
 ## 🌐 FastAPI Public API
 
-External tools can create users via a single secure endpoint.
+The backend also includes a public endpoint to create users externally with API key authentication.
 
 ### 🔐 Authentication
 
-Use the `x-api-key` header with one of your authorized keys (`key1`, `key2`, etc.).
+Use one of the following API keys in your request header:
 
-Example:
+- `key1`
+- `key2`
+- `key3`
+
+**Header format:**
 
 ```
 x-api-key: key1
 ```
 
-Each key is limited to **35 users/day**.
+> 🔒 Each key is limited to **35 user creations per day**
 
 ---
 
 ### 🧾 Endpoint: `/usuarios`
 
-**POST /usuarios**
-
+**POST /usuarios**  
 Creates a new user in the database.
 
-#### Headers:
+#### Headers
 
 - `Content-Type: application/json`
 - `x-api-key: <your_key>`
 
-#### Body:
+#### JSON Body
 
 ```json
 {
@@ -122,7 +126,7 @@ Creates a new user in the database.
 }
 ```
 
-#### Example using `curl`:
+#### Example using `curl`
 
 ```bash
 curl -X POST http://localhost:8000/usuarios \
@@ -131,9 +135,7 @@ curl -X POST http://localhost:8000/usuarios \
   -d '{"nombre":"Lucía", "apellidos":"Martínez", "email":"lucia@email.com", "telefono":"+34...", "direccion":"Calle Mayor 5"}'
 ```
 
----
-
-### ✅ Sample Response:
+#### Sample Response
 
 ```json
 {
@@ -164,3 +166,9 @@ pytest tests/
 ```
 
 ---
+
+## 💡 Tips
+
+- Keep your `.env` file private—it stores API keys and DB credentials.
+- Use the FastAPI microservice to integrate with external apps or services.
+- Easily scale with per-key usage limits and public/private API separation.
