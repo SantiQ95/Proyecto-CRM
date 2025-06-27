@@ -2,6 +2,7 @@ import random
 from faker import Faker
 from models.usuario import Usuario
 from models.factura import Factura
+from controllers.reportes_controller import mostrar_resumen_financiero  # ✅ Import report generator
 
 # Faker config for Spanish names/addresses
 fake = Faker("es_ES")
@@ -19,8 +20,6 @@ DESCRIPCIONES = [
 ]
 
 # Function to populate the database with random users and invoices
-# This function generates a random number of users (between 20 and 30) and for each user, it creates a random number of invoices (between 0 and 5).
-# Each invoice has a random description, amount, and status.
 def poblar_base_datos():
     num_usuarios = random.randint(20, 30)
     print(f"🧑 Generando {num_usuarios} usuarios y facturas...\n")
@@ -51,3 +50,4 @@ def poblar_base_datos():
 
 if __name__ == "__main__":
     poblar_base_datos()
+    mostrar_resumen_financiero()  # 📄 Auto-generate report after population
