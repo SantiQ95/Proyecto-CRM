@@ -29,6 +29,8 @@ def crear_factura():
     factura.guardar()
 
     _mostrar_factura_creada(factura, usuario)
+    return factura  # Return the created invoice for further processing if needed
+    
 
 # ——— Mostrar facturas por usuario ———
 # This function retrieves and displays all invoices for a specific user based on their email.
