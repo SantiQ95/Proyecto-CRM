@@ -4,6 +4,20 @@ import os
 from datetime import datetime
 from pathlib import Path
 
+# ——— Internal Rounding Helper ———
+
+def redondear_resumen(resumen: dict, precision: int = 2):
+    resumen["resumen_general"]["ingresos_totales"] = round(resumen["resumen_general"]["ingresos_totales"], precision)
+    resumen["resumen_general"]["ingresos_pagados"] = round(resumen["resumen_general"]["ingresos_pagados"], precision)
+    resumen["resumen_general"]["ingresos_pendientes"] = round(resumen["resumen_general"]["ingresos_pendientes"], precision)
+
+    for usuario in resumen.get("usuarios", []):
+        usuario["monto_total"] = round(usuario["monto_total"], precision)
+        usuario["monto_pagado"] = round(usuario["monto_pagado"], precision)
+        usuario["monto_pendiente"] = round(usuario["monto_pendiente"], precision)
+
+    return resumen
+
 # ——— Shared Logic ———
 
 def _calcular_resumen_financiero():
@@ -60,6 +74,8 @@ def mostrar_resumen_financiero(output_dir=None):
         print(f"❌ {error}\n")
         return
 
+    resumen_final = redondear_resumen(resumen_final)
+
     for usuario in resumen_final["usuarios"]:
         print(f"\nUsuario: {usuario['nombre']} ({usuario['email']})")
         print(f"- Total facturas: {usuario['total_facturas']}")
@@ -80,7 +96,10 @@ def mostrar_resumen_financiero(output_dir=None):
 # ——— API Version ———
 
 def obtener_resumen_financiero_json():
-    return _calcular_resumen_financiero()
+    resumen, error = _calcular_resumen_financiero()
+    if resumen:
+        resumen = redondear_resumen(resumen)
+    return resumen, error
 
 def guardar_resumen_en_archivo(resumen, output_dir=None):
     if output_dir is None:
@@ -89,6 +108,8 @@ def guardar_resumen_en_archivo(resumen, output_dir=None):
     os.makedirs(output_dir, exist_ok=True)
     filename = f"resumen_financiero_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.json"
     filepath = Path(output_dir) / filename
+
+    resumen = redondear_resumen(resumen)
 
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(resumen, f, ensure_ascii=False, indent=4)
