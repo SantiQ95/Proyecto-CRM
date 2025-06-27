@@ -1,4 +1,5 @@
 # reset_db.py
+# This script resets the MongoDB database by deleting all documents in the usuarios and facturas collections
 
 from databases.db import usuarios_collection, facturas_collection
 import os

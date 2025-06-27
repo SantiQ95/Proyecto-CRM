@@ -78,6 +78,20 @@ def mostrar_facturas_por_usuario():
     print(f"Monto pendiente: ${estado_totales['Pendiente']:.2f}")
     print(f"Monto cancelado: ${estado_totales['Cancelada']:.2f}\n")
 
+# ——— Crear factura desde API ———
+# This function allows the creation of an invoice through an API call, validating the user and invoice
+def crear_factura_desde_api(email_cliente, descripcion, monto, estado):
+    from models.factura import Factura
+
+    usuario = usuarios_collection.find_one({"email": email_cliente})
+    if not usuario:
+        return None, "Usuario no encontrado"
+
+    factura = Factura(email_cliente, descripcion, monto, estado)
+    factura.guardar()
+    return factura, None
+
+
 
 # ——— Helpers ———
 # These are utility functions used within the controller to handle user input and display messages.

@@ -1,0 +1,420 @@
+{
+    "timestamp": "2025-06-27 18:22:50",
+    "resumen_general": {
+        "total_usuarios": 51,
+        "total_facturas": 135,
+        "ingresos_totales": 74287.37000000002,
+        "ingresos_pagados": 18335.670000000002,
+        "ingresos_pendientes": 28491.669999999995
+    },
+    "usuarios": [
+        {
+            "nombre": "Dolores Barriga",
+            "email": "dolores.barriga148@email.com",
+            "total_facturas": 3,
+            "monto_total": 1263.9199999999998,
+            "monto_pagado": 0,
+            "monto_pendiente": 997.89
+        },
+        {
+            "nombre": "Norberto Hierro",
+            "email": "norberto.hierro763@email.com",
+            "total_facturas": 2,
+            "monto_total": 874.46,
+            "monto_pagado": 874.46,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Nico Arteaga",
+            "email": "nico.arteaga480@email.com",
+            "total_facturas": 2,
+            "monto_total": 635.75,
+            "monto_pagado": 425.47,
+            "monto_pendiente": 210.28
+        },
+        {
+            "nombre": "Sandalio Marin",
+            "email": "sandalio.marin678@email.com",
+            "total_facturas": 2,
+            "monto_total": 853.1999999999999,
+            "monto_pagado": 0,
+            "monto_pendiente": 535.93
+        },
+        {
+            "nombre": "Josué Amat",
+            "email": "josué.amat571@email.com",
+            "total_facturas": 5,
+            "monto_total": 3516.04,
+            "monto_pagado": 890.19,
+            "monto_pendiente": 797.74
+        },
+        {
+            "nombre": "Ambrosio Rico",
+            "email": "ambrosio.rico499@email.com",
+            "total_facturas": 1,
+            "monto_total": 780.7,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "María Ángeles Carballo",
+            "email": "maría ángeles.carballo449@email.com",
+            "total_facturas": 4,
+            "monto_total": 1429.8999999999999,
+            "monto_pagado": 465.23,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "René Andres",
+            "email": "rené.andres429@email.com",
+            "total_facturas": 4,
+            "monto_total": 2437.55,
+            "monto_pagado": 0,
+            "monto_pendiente": 803.5
+        },
+        {
+            "nombre": "Eusebia Bermúdez",
+            "email": "eusebia.bermúdez361@email.com",
+            "total_facturas": 5,
+            "monto_total": 2239.73,
+            "monto_pagado": 870.5,
+            "monto_pendiente": 294.51
+        },
+        {
+            "nombre": "Jimena Iñiguez",
+            "email": "jimena.iñiguez998@email.com",
+            "total_facturas": 2,
+            "monto_total": 1501.47,
+            "monto_pagado": 0,
+            "monto_pendiente": 991.66
+        },
+        {
+            "nombre": "Beatriz Casanovas",
+            "email": "beatriz.casanovas647@email.com",
+            "total_facturas": 2,
+            "monto_total": 1110.21,
+            "monto_pagado": 386.46,
+            "monto_pendiente": 723.75
+        },
+        {
+            "nombre": "Paco Mateo",
+            "email": "paco.mateo316@email.com",
+            "total_facturas": 0,
+            "monto_total": 0,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Haroldo Cal",
+            "email": "haroldo.cal675@email.com",
+            "total_facturas": 5,
+            "monto_total": 3749.08,
+            "monto_pagado": 894.61,
+            "monto_pendiente": 1546.19
+        },
+        {
+            "nombre": "Amparo Roldán",
+            "email": "amparo.roldán479@email.com",
+            "total_facturas": 5,
+            "monto_total": 2263.99,
+            "monto_pagado": 940.44,
+            "monto_pendiente": 244.5
+        },
+        {
+            "nombre": "Emiliana Ramirez",
+            "email": "emiliana.ramirez774@email.com",
+            "total_facturas": 3,
+            "monto_total": 2125.27,
+            "monto_pagado": 0,
+            "monto_pendiente": 1512.76
+        },
+        {
+            "nombre": "África Olivera",
+            "email": "áfrica.olivera242@email.com",
+            "total_facturas": 0,
+            "monto_total": 0,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Ismael Alberto",
+            "email": "ismael.alberto510@email.com",
+            "total_facturas": 2,
+            "monto_total": 1624.1,
+            "monto_pagado": 0,
+            "monto_pendiente": 963.89
+        },
+        {
+            "nombre": "Lalo Carvajal",
+            "email": "lalo.carvajal499@email.com",
+            "total_facturas": 0,
+            "monto_total": 0,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Dolores Querol",
+            "email": "dolores.querol517@email.com",
+            "total_facturas": 3,
+            "monto_total": 2651.36,
+            "monto_pagado": 0,
+            "monto_pendiente": 1888.75
+        },
+        {
+            "nombre": "Raimundo Blasco",
+            "email": "raimundo.blasco131@email.com",
+            "total_facturas": 0,
+            "monto_total": 0,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Sancho Pla",
+            "email": "sancho.pla385@email.com",
+            "total_facturas": 4,
+            "monto_total": 1873.1100000000001,
+            "monto_pagado": 0,
+            "monto_pendiente": 274.99
+        },
+        {
+            "nombre": "Santiago Quintanilla",
+            "email": "santiagoquintanilla@email.com",
+            "total_facturas": 0,
+            "monto_total": 0,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Graciela Sancho",
+            "email": "graciela.sancho928@email.com",
+            "total_facturas": 3,
+            "monto_total": 1655.72,
+            "monto_pagado": 0,
+            "monto_pendiente": 207.58
+        },
+        {
+            "nombre": "Dimas Escolano",
+            "email": "dimas.escolano576@email.com",
+            "total_facturas": 4,
+            "monto_total": 2426.21,
+            "monto_pagado": 1757.92,
+            "monto_pendiente": 668.29
+        },
+        {
+            "nombre": "Asunción Grau",
+            "email": "asunción.grau408@email.com",
+            "total_facturas": 0,
+            "monto_total": 0,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Leopoldo Torrijos",
+            "email": "leopoldo.torrijos219@email.com",
+            "total_facturas": 4,
+            "monto_total": 2834.97,
+            "monto_pagado": 0,
+            "monto_pendiente": 2175.23
+        },
+        {
+            "nombre": "Jesús Quintana",
+            "email": "jesús.quintana353@email.com",
+            "total_facturas": 2,
+            "monto_total": 445.03,
+            "monto_pagado": 211.14,
+            "monto_pendiente": 233.89
+        },
+        {
+            "nombre": "Herberto Cuesta",
+            "email": "herberto.cuesta149@email.com",
+            "total_facturas": 5,
+            "monto_total": 2862.9,
+            "monto_pagado": 1372.15,
+            "monto_pendiente": 944.9300000000001
+        },
+        {
+            "nombre": "Itziar Cardona",
+            "email": "itziar.cardona734@email.com",
+            "total_facturas": 4,
+            "monto_total": 1903.79,
+            "monto_pagado": 240.55,
+            "monto_pendiente": 1175.77
+        },
+        {
+            "nombre": "Calisto Bermejo",
+            "email": "calisto.bermejo731@email.com",
+            "total_facturas": 2,
+            "monto_total": 1674.4,
+            "monto_pagado": 0,
+            "monto_pendiente": 864.82
+        },
+        {
+            "nombre": "Febe Mena",
+            "email": "febe.mena626@email.com",
+            "total_facturas": 4,
+            "monto_total": 1388.18,
+            "monto_pagado": 716.79,
+            "monto_pendiente": 319.01
+        },
+        {
+            "nombre": "Glauco Pera",
+            "email": "glauco.pera952@email.com",
+            "total_facturas": 5,
+            "monto_total": 2553.9700000000003,
+            "monto_pagado": 1060.52,
+            "monto_pendiente": 986.21
+        },
+        {
+            "nombre": "Nadia Salas",
+            "email": "nadia.salas291@email.com",
+            "total_facturas": 2,
+            "monto_total": 1649.23,
+            "monto_pagado": 692.6,
+            "monto_pendiente": 956.63
+        },
+        {
+            "nombre": "Bonifacio Aguilar",
+            "email": "bonifacio.aguilar484@email.com",
+            "total_facturas": 4,
+            "monto_total": 1674.8400000000001,
+            "monto_pagado": 122.43,
+            "monto_pendiente": 1465.93
+        },
+        {
+            "nombre": "Fidela Méndez",
+            "email": "fidela.méndez513@email.com",
+            "total_facturas": 3,
+            "monto_total": 1589.17,
+            "monto_pagado": 415.37,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Moisés Duque",
+            "email": "moisés.duque163@email.com",
+            "total_facturas": 2,
+            "monto_total": 812.16,
+            "monto_pagado": 812.16,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Trinidad Ledesma",
+            "email": "trinidad.ledesma317@email.com",
+            "total_facturas": 5,
+            "monto_total": 3295.71,
+            "monto_pagado": 2264.0,
+            "monto_pendiente": 695.28
+        },
+        {
+            "nombre": "Matías Durán",
+            "email": "matías.durán956@email.com",
+            "total_facturas": 0,
+            "monto_total": 0,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Lina Carvajal",
+            "email": "lina.carvajal404@email.com",
+            "total_facturas": 4,
+            "monto_total": 2851.87,
+            "monto_pagado": 0,
+            "monto_pendiente": 1329.55
+        },
+        {
+            "nombre": "Dionisio Valls",
+            "email": "dionisio.valls486@email.com",
+            "total_facturas": 1,
+            "monto_total": 126.43,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Paula Lara",
+            "email": "paula.lara386@email.com",
+            "total_facturas": 1,
+            "monto_total": 725.1,
+            "monto_pagado": 0,
+            "monto_pendiente": 725.1
+        },
+        {
+            "nombre": "Melchor Ruiz",
+            "email": "melchor.ruiz910@email.com",
+            "total_facturas": 5,
+            "monto_total": 2787.0,
+            "monto_pagado": 1815.48,
+            "monto_pendiente": 63.64
+        },
+        {
+            "nombre": "Sarita Murcia",
+            "email": "sarita.murcia819@email.com",
+            "total_facturas": 1,
+            "monto_total": 810.32,
+            "monto_pagado": 0,
+            "monto_pendiente": 810.32
+        },
+        {
+            "nombre": "Gabriela Herrera",
+            "email": "gabriela.herrera554@email.com",
+            "total_facturas": 4,
+            "monto_total": 1407.51,
+            "monto_pagado": 632.36,
+            "monto_pendiente": 248.86
+        },
+        {
+            "nombre": "Chucho Vega",
+            "email": "chucho.vega376@email.com",
+            "total_facturas": 1,
+            "monto_total": 222.33,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Eufemia Molina",
+            "email": "eufemia.molina595@email.com",
+            "total_facturas": 5,
+            "monto_total": 2777.88,
+            "monto_pagado": 0,
+            "monto_pendiente": 1025.8
+        },
+        {
+            "nombre": "Josué Simó",
+            "email": "josué.simó117@email.com",
+            "total_facturas": 5,
+            "monto_total": 2274.41,
+            "monto_pagado": 474.84000000000003,
+            "monto_pendiente": 455.02
+        },
+        {
+            "nombre": "Rubén Suárez",
+            "email": "rubén.suárez673@email.com",
+            "total_facturas": 3,
+            "monto_total": 1254.93,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        },
+        {
+            "nombre": "Ildefonso Abella",
+            "email": "ildefonso.abella445@email.com",
+            "total_facturas": 1,
+            "monto_total": 880.74,
+            "monto_pagado": 0,
+            "monto_pendiente": 880.74
+        },
+        {
+            "nombre": "Maribel Alcolea",
+            "email": "maribel.alcolea851@email.com",
+            "total_facturas": 1,
+            "monto_total": 472.73,
+            "monto_pagado": 0,
+            "monto_pendiente": 472.73
+        },
+        {
+            "nombre": "Encarna Mendizábal",
+            "email": "encarna.mendizábal913@email.com",
+            "total_facturas": 0,
+            "monto_total": 0,
+            "monto_pagado": 0,
+            "monto_pendiente": 0
+        }
+    ]
+}

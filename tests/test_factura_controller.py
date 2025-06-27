@@ -2,7 +2,8 @@ from unittest.mock import patch, MagicMock
 from controllers import factura_controller
 from models.factura import Factura
 
-
+# Tests for the Factura Controller
+# Test creating an invoice with a non-existent user
 @patch("controllers.factura_controller.usuarios_collection")
 def test_crear_factura_usuario_no_encontrado(mock_usuarios):
     mock_usuarios.find_one.return_value = None
@@ -13,7 +14,7 @@ def test_crear_factura_usuario_no_encontrado(mock_usuarios):
         factura_controller.crear_factura()
         mock_print.assert_any_call("❌ Usuario no encontrado. No se puede crear factura.\n")
 
-
+# Test creating an invoice with an empty description
 @patch("controllers.factura_controller.usuarios_collection")
 def test_crear_factura_descripcion_vacia(mock_usuarios):
     mock_usuarios.find_one.return_value = {"email": "valido@test.com"}
@@ -24,7 +25,7 @@ def test_crear_factura_descripcion_vacia(mock_usuarios):
         factura_controller.crear_factura()
         mock_print.assert_any_call("❌ La descripción no puede estar vacía.\n")
 
-
+# Test creating an invoice with an invalid amount (non-numeric)
 @patch("controllers.factura_controller.usuarios_collection")
 def test_crear_factura_monto_invalido(mock_usuarios):
     mock_usuarios.find_one.return_value = {"email": "valido@test.com"}
@@ -40,7 +41,7 @@ def test_crear_factura_monto_invalido(mock_usuarios):
         factura_controller.crear_factura()
         mock_print.assert_any_call("❌ Monto inválido. Debe ser un número positivo.\n")
 
-
+# Test creating an invoice with a valid amount
 @patch("controllers.factura_controller.usuarios_collection")
 def test_crear_factura_estado_invalido(mock_usuarios):
     mock_usuarios.find_one.return_value = {"email": "valido@test.com"}
@@ -57,7 +58,7 @@ def test_crear_factura_estado_invalido(mock_usuarios):
         factura_controller.crear_factura()
         mock_print.assert_any_call("❌ Estado no válido.\n")
 
-
+# Test creating an invoice with a valid user and all valid inputs
 @patch("models.factura.Factura.guardar")
 @patch("controllers.factura_controller.usuarios_collection")
 def test_crear_factura_exitosa(mock_usuarios, mock_guardar):
@@ -79,7 +80,7 @@ def test_crear_factura_exitosa(mock_usuarios, mock_guardar):
         mock_print.assert_any_call("\n✅ Factura creada exitosamente!")
 
 
-
+# Test showing invoices for a user with a valid email
 @patch("controllers.factura_controller.usuarios_collection")
 def test_mostrar_facturas_usuario_no_encontrado(mock_usuarios):
     mock_usuarios.find_one.return_value = None
@@ -89,7 +90,7 @@ def test_mostrar_facturas_usuario_no_encontrado(mock_usuarios):
         factura_controller.mostrar_facturas_por_usuario()
         mock_print.assert_any_call("❌ Usuario no encontrado.\n")
 
-
+# Test showing invoices for a user with valid email but no invoices
 @patch("controllers.factura_controller.facturas_collection")
 @patch("controllers.factura_controller.usuarios_collection")
 def test_mostrar_facturas_usuario_sin_facturas(mock_usuarios, mock_facturas):
